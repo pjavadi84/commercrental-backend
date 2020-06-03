@@ -13,8 +13,11 @@ class CreateEquipment < ActiveRecord::Migration[6.0]
       t.boolean :pickup
       t.boolean :delivery
       t.text :additional_comments
-      t.integer :customer_id
-      t.integer :vendor_id
+      # t.integer :customer_id
+      # t.integer :vendor_id
+
+      # t.references :vendor, null: false, foreign_key: true
+      # t.references :customer, null: false, foreign_key: true
 
 
       t.timestamps
