@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_06_03_163523) do
 
   create_table "equipment", force: :cascade do |t|
     t.string "name"
-    t.string "item_id"
+    t.integer "item_id"
     t.string "category"
     t.datetime "rental_start_date"
     t.datetime "rental_end_date"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_06_03_163523) do
     t.boolean "pickup"
     t.boolean "delivery"
     t.text "additional_comments"
+    t.integer "customer_id"
+    t.integer "vendor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
