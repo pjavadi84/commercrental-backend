@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+hummer = Equipment.create(name: "Rotary Hummer")
+generator = Equipment.create(name:"Generator")
+demolisher = Equipment.create(name:"S7 Demolisher")
+
+Customer.create(fullname: "Amin")
