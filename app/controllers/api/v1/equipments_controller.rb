@@ -8,6 +8,11 @@ class Api::V1::EquipmentsController < ApplicationController
 
     def create 
         equipment = Equipment.new(equipment_params)
+        if equipment.save
+            render json:equipment, status: :accepted
+        else
+            render json: {errors: equipment.errors.full_messages }, status: :unprocessable_entity
+        end
     end
 
     private 
