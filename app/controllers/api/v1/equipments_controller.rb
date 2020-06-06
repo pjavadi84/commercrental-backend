@@ -2,12 +2,10 @@ class Api::V1::EquipmentsController < ApplicationController
 
     def index
         equipments = Equipment.all
-        options = {
-            include: [:customer, :vendor]
-        }
-        # objective to render json format
-        # render json: equipments
-        render json: EquipmentSerializer.new(equipments,options)
+        # options = {
+        #     include: [:customer, :vendor]
+        # }
+        render json: EquipmentSerializer.new(equipments)
 
     end
 
