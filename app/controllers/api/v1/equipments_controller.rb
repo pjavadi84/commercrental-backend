@@ -10,12 +10,13 @@ class Api::V1::EquipmentsController < ApplicationController
     end
 
     def create 
-        equipment = Equipment.new(equipment_params)
-        if equipment.save
+        equipment = Equipment.create(equipment_params)
+
+        # if equipment.save
             render json: equipment, status: 200
-        else
-            render json: {errors: equipment.errors.full_messages }, status: :unprocessable_entity
-        end
+        # else
+            # render json: {errors: equipment.errors.full_messages }, status: :unprocessable_entity
+        # end
     end
 
     def show
@@ -36,6 +37,7 @@ class Api::V1::EquipmentsController < ApplicationController
 
     private 
     def equipment_params
-        params.require(equipment).permit(:name,:item_id,:category,:availability,:pickup,:delivery,:image)
+        params.require(:equipment).permit(:name,:item_id,:category,:availability, :image, :vendor_id, :customer_id)
+
     end
 end
