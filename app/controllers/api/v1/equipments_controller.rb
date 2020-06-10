@@ -11,7 +11,6 @@ class Api::V1::EquipmentsController < ApplicationController
 
     def create 
         equipment = Equipment.new(equipment_params)
-        binding.pry
         if equipment.save
             render json: equipment, status: 200
         else
@@ -36,7 +35,7 @@ class Api::V1::EquipmentsController < ApplicationController
     end
 
     private 
-    def equipment_params 
+    def equipment_params
         params.require(equipment).permit(:name,:item_id,:category,:availability,:pickup,:delivery,:image)
     end
 end
