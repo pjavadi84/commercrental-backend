@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_08_173117) do
+ActiveRecord::Schema.define(version: 2020_06_11_043406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,8 +32,6 @@ ActiveRecord::Schema.define(version: 2020_06_08_173117) do
     t.string "name"
     t.integer "item_id"
     t.string "category"
-    t.datetime "rental_start_date"
-    t.datetime "rental_end_date"
     t.boolean "availability"
     t.integer "price_per_hour"
     t.integer "price_per_day"
@@ -46,6 +44,9 @@ ActiveRecord::Schema.define(version: 2020_06_08_173117) do
     t.bigint "customer_id", null: false
     t.bigint "vendor_id", null: false
     t.string "image"
+    t.integer "hours_required"
+    t.integer "days_required"
+    t.integer "montths_required"
     t.index ["customer_id"], name: "index_equipment_on_customer_id"
     t.index ["vendor_id"], name: "index_equipment_on_vendor_id"
   end
