@@ -10,13 +10,14 @@ class Api::V1::EquipmentsController < ApplicationController
     end
 
     def create 
-        equipment = Equipment.create(equipment_params)
-
-        # if equipment.save
+        equipment = Equipment.new(equipment_params)
+        # binding.pry
+        if equipment.save
+            
             render json: equipment, status: 200
-        # else
-            # render json: {errors: equipment.errors.full_messages }, status: :unprocessable_entity
-        # end
+        else
+            render json: {errors: equipment.errors.full_messages }, status: :unprocessable_entity
+        end
     end
 
     def show

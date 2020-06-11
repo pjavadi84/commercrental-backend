@@ -15,6 +15,6 @@ parsa = Customer.create(fullname: "Parsa Moslehi")
 # Equipment.create(name:"S7 Demolisher", customer: amin, vendor: abc)
 # Equipment.create(name:"SPG Rotary Hammer", customer: amin, vendor: abc)
 # Equipment.create(name:"Slab Remover", customer:parsa )
-Equipment.create(name: "Rotary Hummer", item_id: "ABS9393", category: "tools",rental_start_date: 1/18/1999, rental_end_date: 1/19/1999, availability: true, price_per_hour: 45.0, price_per_day: 400, price_per_month: 12000, pickup:false, delivery:true, additional_comments: "This is the best hammer out there", image: "https://www.clarwn.com/image/cache/images/xdhr242rfe-makita-18v-24mm-brushless-rotary-hammer-drill.jpg.pagespeed.ic.YipHMsDyO2-1000x1000.jpg", customer: amin, vendor: abc)
+Equipment.create(name: "Rotary Hummer", item_id: "ABS9393", category: "tools", hours_required: 0, days_required: 4, montths_required: 0, availability: true, price_per_hour: 45.0, price_per_day: 400, price_per_month: 12000, pickup:false, delivery:true, additional_comments: "This is the best hammer out there", image: "https://www.clarwn.com/image/cache/images/xdhr242rfe-makita-18v-24mm-brushless-rotary-hammer-drill.jpg.pagespeed.ic.YipHMsDyO2-1000x1000.jpg", customer: amin, vendor: abc)
 # Equipment.create(name:"Generator")
 
